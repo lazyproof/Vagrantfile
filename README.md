@@ -28,11 +28,11 @@ sudo fig stop
 Fig.yml
 ```yml
 db:
-  image: rockyj/postgres
+  image: postgres
   ports:
     - "5432"
 web:
-  image: rockyj/app_name
+  image: rails_app
   command: bundle exec rails s
   ports:
     - "3000:3000"
