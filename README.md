@@ -15,7 +15,10 @@ cd Vagrantfile
 
 Launch Script
 ```sh
-vagrant up
+vagrant up && vagrant ssh
+```
+```sh
+
 sudo fig build
 sudo fig up
 #in another terminal window
