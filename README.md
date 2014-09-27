@@ -1,6 +1,8 @@
 Vagrantfile
 ===========
 
+This is designed for people with OSX, but can easily be adapted.
+
 - Runs CoreOS
 - Opens a Port to your host computer
 - Mounts shared folder
