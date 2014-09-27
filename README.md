@@ -15,7 +15,7 @@ cd Vagrantfile
 
 Launch Script
 ```sh
-vagrant up && vagrant ssh
+vagrant up
 sudo fig build
 sudo fig up
 #in another terminal window
@@ -23,4 +23,19 @@ sudo fig run web bundle exec rake db:create
 sudo fig run web bundle exec rake db:migrate
 #when you want to stop
 sudo fig stop
+```
+
+Fig.yml
+```yml
+db:
+  image: rockyj/postgres
+  ports:
+    - "5432"
+web:
+  image: rockyj/app_name
+  command: bundle exec rails s
+  ports:
+    - "3000:3000"
+  links:
+    - db
 ```
